@@ -1,10 +1,12 @@
-gas_price = 2.6
-wear_tear = 0.1
-mpg = 30
-total_price = float(input('Total Price: '))
-amt_given = float(input('Amount Given: '))
-tip = amt_given - total_price
-print('Tip given = {}'.format(tip))
-trip_distance = float(input('Miles: '))
-print (tip-(gas_price / trip_distance + tip * wear_tear))
-
+while True:
+    gas_price = 2.6 #Avg gas price in NC
+    wear_tear = 0.1 #estimated 10 cents per mile in tire and engine wear
+    mpg = 30 # my car gets 30 miles per gallon
+    delivery_charge = 1.25 #dominos pays the driver $1.25 each delivery
+    total_price = float(input('Total Price: ')) #Total price of order
+    amt_given = float(input('Amount Given: ')) #Total amount of money received from customer
+    tip = amt_given - total_price #This is your total Gross Tip
+    print('Tip given = {}'.format(tip)) #This prints your tip and saves the tip as a variable ( I think..lol)
+    trip_distance = float(input('Miles: ')) # This is your round trip distance in miles
+    print (tip + delivery_charge -(gas_price / trip_distance + tip * wear_tear)) #This prints your Net Tip after factoring in the delivery charge, gas, and wear n tear
+ 
